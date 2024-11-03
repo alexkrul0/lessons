@@ -4,11 +4,8 @@ def add_everything_up(a, b):
         print(a + b)
 
     except TypeError:
-        if isinstance(a, str):
-            print(a + str(b))
-        elif isinstance(b, str):
-            print(str(a) + b)
 
+        print(str(a) + str(b))
 
 
 add_everything_up(123.456, 'строка')
