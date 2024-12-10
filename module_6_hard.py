@@ -72,6 +72,7 @@ class Circle(Figure):
     sides_count = 1
 
     def __init__(self, __color, __sides, filled=True):
+        self.clean_side()
         super().__init__(__color, __sides, filled=True)
         self.__radius = __sides / 2 * math.pi
 
@@ -81,6 +82,10 @@ class Circle(Figure):
 
 class Triangle(Figure):
     sides_count = 3
+
+    def __init__(self, __color, __sides, filled=True):
+        self.clean_side()
+        super().__init__(__color, __sides, filled=True)
 
     def get_square(self):
         p = sum(self.set_sides()) / 2
@@ -94,6 +99,7 @@ class Cube(Figure):
     # __sides = []
 
     def __init__(self, color, *args):
+        #self.__sides = []
         self.clean_side()
         super().__init__(color, *args)
         self.__sides = self.get_sides()
