@@ -6,13 +6,13 @@ import unittest
 class RunnerTest(unittest.TestCase):
 
     def test_walk(self):
-        self.run1 = runner.Runner('Mike')
+        self.run1 = runner.Runner('Runner 1')
         for i in range(0, 10):
             self.run1.walk()
         self.assertEqual(self.run1.distance, 50)
 
     def test_run(self):
-        self.run2 = runner.Runner('Tom')
+        self.run2 = runner.Runner('Runner 2')
         for i in range(0, 10):
             self.run2.run()
         self.assertEqual(self.run2.distance, 100)
